@@ -1,0 +1,8 @@
+{
+  "name": "@playground/common",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "license": "ISC",
+  "packageManager": "yarn@4.4.1"
+}

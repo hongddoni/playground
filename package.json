@@ -1,0 +1,17 @@
+{
+  "name": "playground",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "themind": "yarn workspace @playground/themind"
+  },
+  "packageManager": "yarn@4.4.1",
+  "devDependencies": {
+    "eslint": "^9.9.1",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  }
+}
