@@ -5,7 +5,7 @@ import {useMessageBox} from "../hooks/useMessageBox.ts";
 export const MessageBox = () => {
     const {messages} = useMessageBox();
 
-    console.log(messages);
+    if(!messages || !messages.messages) return null;
 
     return (
         <div className={s.messageBox}>

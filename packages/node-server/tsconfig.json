@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "ESNext",
+    "target": "ESNext"
+  },
+  "include": ["src/**/*.ts"]
+}
+

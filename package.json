@@ -6,7 +6,7 @@
     ]
   },
   "scripts": {
-    "themind": "yarn workspace @playground/themind"
+    "themind": "yarn workspace themind run dev"
   },
   "packageManager": "yarn@4.4.1",
   "devDependencies": {

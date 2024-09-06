@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "references": [
+    { "path": "./packages/theMind" },
+    { "path": "./packages/common" },
+    { "path": "./packages/node-server" }
+  ]
+}
