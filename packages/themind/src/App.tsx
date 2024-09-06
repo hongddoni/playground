@@ -1,9 +1,9 @@
-import {Card} from "./components/card/Card.tsx";
 import {ChatButton} from "./components/chat/ChatButton.tsx";
 import {MainContainer} from "./components/container/main/MainContainer.tsx";
-import {User} from "./components/user/User.tsx";
+import {User} from "./components/user/view/User.tsx";
 import {BoardContainer} from "./components/container/board/BoardContainer.tsx";
 import {MainContainerProvider} from "./components/container/main/context/MainContainerProvider.tsx";
+import {BoardCardList} from "./components/board/cardList/BoardCardList.tsx";
 
 function App() {
 
@@ -11,11 +11,11 @@ function App() {
         <MainContainerProvider>
             <MainContainer>
                 <BoardContainer>
-                    <Card/>
-                    <ChatButton/>
+                    <BoardCardList/>
                 </BoardContainer>
                 <User/>
             </MainContainer>
+            <ChatButton/>
         </MainContainerProvider>
     )
 }

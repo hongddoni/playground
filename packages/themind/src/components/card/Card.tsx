@@ -2,11 +2,12 @@ import s from "./card.module.scss";
 import {useReducer} from "react";
 
 interface Props {
-
+    number: number;
+    onClick?: () => void;
 }
 
 export const Card = (props: Props) => {
-    const number = 76;
+    const {number, onClick} = props;
     const [flip, setFlip] = useReducer(v => !v);
 
     const renderer = () => {
@@ -36,7 +37,7 @@ export const Card = (props: Props) => {
     }
 
     return (
-        <div className={s.card} role={'button'} onClick={setFlip}>
+        <div className={s.card} role={'button'} onClick={onClick}>
             {renderer()}
         </div>
     )

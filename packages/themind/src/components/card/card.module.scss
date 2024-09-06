@@ -1,11 +1,11 @@
 .card {
   width: 132px;
   height: 176px;
-  border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 8px;
   flex-shrink: 1;
   padding: 8px;
   cursor: pointer;
+  background-color: white;
 
   span {
     user-select: none;

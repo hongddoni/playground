@@ -1,6 +1,7 @@
-import {createContext, useCallback, useState} from "react";
+import {createContext, useCallback} from "react";
+import {useMainInitialize} from "../hooks/useMainInitialize.ts";
 
-interface StateManager {
+interface States {
     cards: number[];
     addCard: (card: number) => void;
 }
@@ -10,11 +11,11 @@ interface Props {
 }
 
 export const MainContainerProvider = (props: Props) => {
-    const [cards, setCards] = useState<number[]>([]);
+    const {cards, setCards} = useMainInitialize();
 
     const addCard = useCallback((card: number) => {
         setCards([...cards, card]);
-    }, [cards]);
+    }, [cards, setCards]);
 
     return (
         <MainContainerContext.Provider value={{addCard, cards}}>
@@ -23,4 +24,4 @@ export const MainContainerProvider = (props: Props) => {
     )
 }
 
-export const MainContainerContext = createContext<StateManager | undefined>(undefined);
+export const MainContainerContext = createContext<States | undefined>(undefined!);
